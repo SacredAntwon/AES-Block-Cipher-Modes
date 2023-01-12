@@ -4,32 +4,38 @@ Different AES Block Cipher Modes that was done for a final project in my cryptro
 
 ## Use Example
 
-_CFB_
-Encryption: python3 cfb.py -key 1234567890abcdfg -iv 534567890abcdeds -blocksize 16 -infile file.txt -outfile file.enc -encdec 0
+_CFB:_
 
-Decryption: python3 cfb.py -key 1234567890abcdfg -iv 534567890abcdeds -blocksize 16 -infile file.enc -outfile file.dec -encdec 1
+Encryption: `python3 cfb.py -key 1234567890abcdfg -iv 534567890abcdeds -blocksize 16 -infile file.txt -outfile file.enc -encdec 0`
 
-_ECB_
-Encryption: python3 ecb.py -key 1234567890abcdfg -infile file.txt -outfile file.enc -encdec 0
+Decryption: `python3 cfb.py -key 1234567890abcdfg -iv 534567890abcdeds -blocksize 16 -infile file.enc -outfile file.dec -encdec 1`
 
-Decryption: python3 ecb.py -key 1234567890abcdfg -infile file.enc -outfile file.dec -encdec 1
+_ECB:_
 
-_OFB_
-Encryption: python3 ofb.py -key 1234567890abcdfg -iv 534567890abcdeds -infile file.txt -outfile file.enc -encdec 0
+Encryption: `python3 ecb.py -key 1234567890abcdfg -infile file.txt -outfile file.enc -encdec 0`
 
-Decryption: python3 ofb.py -key 1234567890abcdfg -iv 534567890abcdeds -infile file.enc -outfile file.dec -encdec 1
+Decryption: `python3 ecb.py -key 1234567890abcdfg -infile file.enc -outfile file.dec -encdec 1`
 
-_CTR_
-Encryption: python3 ctr.py -key 1234567890abcdfg -noncefile noncefile.bin -infile file.txt -outfile file.enc -encdec 0
+_OFB:_
 
-Decryption: python3 ctr.py -key 1234567890abcdfg -noncefile noncefile.bin -infile file.enc -outfile file.dec -encdec 1
+Encryption: `python3 ofb.py -key 1234567890abcdfg -iv 534567890abcdeds -infile file.txt -outfile file.enc -encdec 0`
 
-_CBC_
-Encryption: python3 cbc.py -key 1234567890abcdfg -iv 534567890abcdeds -infile file.txt -outfile file.enc -encdec 0
+Decryption: `python3 ofb.py -key 1234567890abcdfg -iv 534567890abcdeds -infile file.enc -outfile file.dec -encdec 1`
 
-Decryption: python3 cbc.py -key 1234567890abcdfg -iv 534567890abcdeds -infile file.enc -outfile file.dec -encdec 1
+_CTR:_
 
-_GCM_
-Encryption: python3 gcm.py -key 1234567890abcdfg -tagfile tagfile.bin -noncefile noncefile.bin -infile file.txt -outfile file.enc -encdec 0
+Encryption: `python3 ctr.py -key 1234567890abcdfg -noncefile noncefile.bin -infile file.txt -outfile file.enc -encdec 0`
 
-Decryption: python3 gcm.py -key 1234567890abcdfg -tagfile tagfile.bin -noncefile noncefile.bin -infile file.enc -outfile file.dec -encdec 1
+Decryption: `python3 ctr.py -key 1234567890abcdfg -noncefile noncefile.bin -infile file.enc -outfile file.dec -encdec 1`
+
+_CBC:_
+
+Encryption: `python3 cbc.py -key 1234567890abcdfg -iv 534567890abcdeds -infile file.txt -outfile file.enc -encdec 0`
+
+Decryption: `python3 cbc.py -key 1234567890abcdfg -iv 534567890abcdeds -infile file.enc -outfile file.dec -encdec 1`
+
+_GCM:_
+
+Encryption: `python3 gcm.py -key 1234567890abcdfg -tagfile tagfile.bin -noncefile noncefile.bin -infile file.txt -outfile file.enc -encdec 0`
+
+Decryption: `python3 gcm.py -key 1234567890abcdfg -tagfile tagfile.bin -noncefile noncefile.bin -infile file.enc -outfile file.dec -encdec 1`
